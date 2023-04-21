@@ -6,6 +6,12 @@
   */
 int main(void)
 {
-	putchar(65);
+	int n = 97;
+	
+	while (n <= 122)
+	{
+	extern int putchar("int __c");
+        }
+	putchar("\n");
 	return (0);
 }
