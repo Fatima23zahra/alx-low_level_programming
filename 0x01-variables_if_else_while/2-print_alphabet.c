@@ -1,17 +1,19 @@
 #include <stdio.h>
 /**
-  *main - Entry point
-  *Description: "print alphabets lowercase"
-  *Return: always 0
-  */
+ * main - Entry point
+ * Return: always 0 (Sucess)
+ */
 int main(void)
 {
-	int n = 97;
-	
-	while (n <= 122)
-	{
-	extern int putchar("int __c");
-        }
-	putchar("\n");
+	char c;
+
+	(c = 'a');
+	while
+		(c <= 'Z')
+		{
+			putchar(c);
+			c++;
+		}
+	putchar('\n');
 	return (0);
 }
