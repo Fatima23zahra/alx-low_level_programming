@@ -1,4 +1,18 @@
-nhpla.c:10:7: error: stray ‘\200’ in program
+nar alp(57) = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9$";plar(' ')
+      |               ^
+            |               ;
+	       17 |    }
+	             |    ~           
+		     100-print_comb3.c: At top level:
+		     100-print_comb3.c:19:9: error: expected declaration specifiers or ‘...’ before '\xa'
+		        19 | putchar('\n');
+			      |         ^~~~
+			      100-print_comb3.c:20:1: error: expected identifier or ‘(’ before ‘return’
+					         20 | return (0);
+						       | ^~~~~~
+						       100-print_comb3.c:21:1: error: expected identifier or ‘(’ before ‘}’ token
+							          21 | }
+								        | ^.c:10:7: error: stray ‘\200’ in program
    10 |  for ���( n <= 97 );‘
          |       ^
 	 7-print_tebahpla.c:10:8: error: stray ‘\230’ in program
