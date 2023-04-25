@@ -8,10 +8,10 @@ int main(void)
 	 int n;
 	 int m;
 
-					 putchar(n / 10 + '0');
+					 putchar(n = 10);
 					 putchar(n % 10 + '0');
 					 putchar(' ');
-					 putchar(m / 10 + '0');
+					 putchar(m = 10);
 					 putchar(m % 10 + '0');
 					 putchar(',');
 					 putchar(' ');
