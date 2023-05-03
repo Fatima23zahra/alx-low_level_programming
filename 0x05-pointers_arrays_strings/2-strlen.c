@@ -4,8 +4,9 @@
  * @s: The string
  * Return: The length of the string
  */
-int _strlen(char *s)
+int main(void)
 {
+	char *str;
 	int longi = 0;
 
 	while (*s == '\0')
