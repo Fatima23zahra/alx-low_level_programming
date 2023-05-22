@@ -6,7 +6,6 @@
  * @name: imports name
  * @age: imports age
  * @owner: imports the name of the owner
- * 
  * description: just a lone dog struct in a big kitty world
  */
 
