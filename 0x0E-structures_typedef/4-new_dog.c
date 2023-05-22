@@ -51,33 +51,28 @@ return (dest);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
-	/* if the name and owner are empty and age is less than zero return null*/
-	if (!name || age < 0 || !owner)
-		return (NULL);
+	dog_t *bigdog;
+	char *copyname; /* stores old name */
+	char *copyowner; /* stores old owner */
 
-	dog = (dog_t *) malloc(sizeof(dog_t));
-	if (dog == NULL)
-		return (NULL);
+	bigdog = malloc(sizeof(dog_t));
+	copyname = malloc(sizeof(char) * (_strlen(name) + 1)); /* creating space */
+	copyowner = malloc(sizeof(char) * (_strlen(owner) + 1));
 
-	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if ((*dog).name == NULL)
+	/* checking if malloc failed */
+	if ((bigdog == NULL) || (copyname == NULL) || (copyowner == NULL))
 	{
-		free(dog);
+		free(bigdog);
+		free(copyname);
+		free(copyowner);
 		return (NULL);
 	}
 
-	dog->name = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if ((*dog).owner == NULL)
-	{
-		free(dog->name);
-		free(dog);
-		return (NULL);
-	}
+	_strcpy(copyname, name);
+	_strcpy(copyowner, owner);
 
-	dog->name = _strcpy(dog->name, name);
-	dog->age = age;
-	dog->owner = _strcpy(dog->owner, owner);
-
-	return (dog);
+	bigdog->name = copyname;
+	bigdog->age = age;
+	bigdog->owner = copyowner;
+	return (bigdog);
 }
