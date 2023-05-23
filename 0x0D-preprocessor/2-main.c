@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - print name of this source file 
+ * main - simply prints the file
+ * name that was used to compile
+ * this source code
  * Return: Always 0
  */
 
