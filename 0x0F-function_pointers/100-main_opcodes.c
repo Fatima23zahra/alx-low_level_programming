@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * main - contains logic
- * @argc: arg count
+ * main - check the code for the school students
+ * @argc: the num of arg
  * @argv: arg vector
  *
  * Return: always 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	char *p = (char *)main;
 	int b;
@@ -17,10 +17,10 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 		printf("Error'\n"), exit(1);
 	b = atoi(argv[1]);
-			if (b < 0)
-			printf("Error'\n"), exit(2);
+	if (b < 0)
+		printf("Error'\n"), exit(2);
 			
-			while (b--)
-			printf("%02hhx%s", *p++, b ? " " : "\n");
+	while (b--)
+		printf("%02hhx%s", *p++, b ? " " : "\n");
 	return (0);
 }
