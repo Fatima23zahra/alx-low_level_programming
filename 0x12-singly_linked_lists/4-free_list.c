@@ -1,16 +1,22 @@
-#include "lists.h"
 #include <stdlib.h>
-#include <stddef.h>
+#include <string.h>
+#include "lists.h"
 
 /**
- * free_list - a linked list
- * @head: the first list to be free
+ * free_list - frees all
+ * @head: contains the template
+ * Return: void
  */
+
 void free_list(list_t *head)
 {
-	if (!head)
-		return;
+	list_t *temp;
 
-	free(head->str);
-	free(head);
+	while (head != NULL)
+	{
+		temp = head;
+		head = head->next;
+		free(temp->str);
+		free(temp);
+	}
 }
