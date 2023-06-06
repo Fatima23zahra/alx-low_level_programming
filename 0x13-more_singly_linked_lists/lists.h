@@ -37,6 +37,9 @@ size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
 listint_t *_find_listint_loop(listint_t *head, listint_t **link);
 int is_linked(const listint_t *head, const listint_t *node);
+
+listint_t *add_nodeptr(listint_t **head, const listint_t *p);
+int listint_contains(const listint_t *head, const listint_t *p);
 int pop_listint(listint_t **head);
 
 #endif
